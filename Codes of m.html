@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Movies & Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 30px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        section {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            margin: 20px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        figcaption {
+            font-style: italic;
+            margin-top: 12px;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .highlighted {
+            background-color: #f39c12;
+            color: white;
+            padding: 7px;
+            font-size: 20px;
+        }
+
+        .movie-image {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .movie-card {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Favorite Movies & Series</h1>
+    </header>
+
+    <nav>
+        <a href="#movies" onclick="showContent('movies')">Movies</a>
+        <a href="#series" onclick="showContent('series')">Series</a>
+    </nav>
+
+    <main>
+        <!-- Movies Section -->
+        <section id="movies" class="active">
+            <h2>Movies</h2>
+            <article class="movie-card">
+                <header>
+                    <h3>The Lord of the Rings</h3>
+                    <span class="highlighted">Fantasy</span>
+                </header>
+                <figure>
+                    <img src="your-image-path-here.jpg" alt="The Lord of the Rings Movie Poster" class="movie-image">
+                    <figcaption>A legendary tale of adventure and bravery.</figcaption>
+                </figure>
+                <p>One of my favorite movies of all time. It takes me on an unforgettable adventure through Middle-earth with unforgettable characters like Frodo Baggins and Gandalf.</p>
+            </article>
+
+            <article class="movie-card">
+                <header>
+                    <h3>Harry Potter</h3>
+                    <span class="highlighted">Magic</span>
+                </header>
+                <figure>
+                    <img src="harry.jpg" alt="Harry Potter Movie Poster">
+
+                    <figcaption>The story of a young wizard discovering his magical destiny.</figcaption>
+                </figure>
+                <p>A magical journey that shaped many of our childhoods. From the first book to the last movie, it's a world full of wonder, courage, and friendships.</p>
+            </article>
+        </section>
+
+        <!-- Series Section -->
+        <section id="series">
+            <h2>Series</h2>
+            <article class="movie-card">
+                <header>
+                    <h3>Stranger Things</h3>
+                    <span class="highlighted">Sci-Fi, Thriller</span>
+                </header>
+                <figure>
+                    <img src="your-image-path-here.jpg" alt="Stranger Things Poster" class="movie-image">
+                    <figcaption>Teenagers facing supernatural mysteries in their town.</figcaption>
+                </figure>
+                <p>A thrilling series that blends 80s nostalgia with supernatural suspense. The mysteries and the bond between the kids is simply captivating.</p>
+            </article>
+
+            <article class="movie-card">
+                <header>
+                    <h3>Attack on Titan</h3>
+                    <span class="highlighted">Action, Drama</span>
+                </header>
+                <figure>
+                    <img src="your-image-path-here.jpg" alt="Attack on Titan Poster" class="movie-image">
+                    <figcaption>Humans battling against giant creatures that threaten their survival.</figcaption>
+                </figure>
+                <p>This anime has a deep story, intense action scenes, and emotional moments. It explores themes of survival, betrayal, and fighting against overwhelming odds.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by [Your Name] | 2025</p>
+    </footer>
+
+    <script>
+        // Function to show and hide the relevant sections
+        function showContent(section) {
+            // Hide both sections initially
+            document.getElementById('movies').classList.remove('active');
+            document.getElementById('series').classList.remove('active');
+
+            // Show the clicked section
+            if (section === 'movies') {
+                document.getElementById('movies').classList.add('active');
+            } else if (section === 'series') {
+                document.getElementById('series').classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
